@@ -1,26 +1,11 @@
 const express = require("express");
+const routes = require('./routes');
 const app = express();
-
 const port = 5000;
 
-// Listen on port 5000
-app.listen(port, () => {
-  console.log(`Server is booming on port 5000
-Visit http://localhost:5000`);
-});
-app.get('/',(req,res) => {
-    res.send("TESTE API")
-})
+app.use(express.json());
+//Adiciona as rotas
+app.use(routes);
 
-app.get('/tone',(req,res) => {
-    res.send("Grande Tone")
-})
-app.get('/nersu',(req,res) => {
-    res.send("Grande Nersu")
-})
-app.get('/default',(req,res) => {
-    res.send("Grande Default")
-})
-app.get('/exa',(req,res) => {
-    res.send("Grande BIT")
-})
+app.listen(port);
+console.log("Server listening on port: " + port);
