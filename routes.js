@@ -4,7 +4,7 @@ const analises = require("./src/controllers/teste");
 
 routes.get('/api/teste',analises.getReviewById)
 routes.get('/',async function(req, res){
-    return res.json(process.env.DB_HOST);
+    return res.json("Welcome to API");
 })
 
 module.exports = routes;
