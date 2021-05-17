@@ -3,22 +3,7 @@
     "builds": [{ "src": "index.js", "use": "@now/node-server" }],
     "routes":[
         {
-        "src":"/nersu",
-        "dest": "/index.js",
-        "methods":["GET"]
-        },
-        {
-            "src":"/exa",
-            "dest": "/index.js",
-            "methods":["GET"]
-        },
-        {
-            "src":"/tone",
-            "dest": "/index.js",
-            "methods":["GET"]
-        },
-        {
-            "src":"/default",
+            "src":"/api/teste",
             "dest": "/index.js",
             "methods":["GET"]
             }
