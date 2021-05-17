@@ -6,13 +6,10 @@ module.exports = {
     const { produtoid } = req.query;
     try{
       await connection
-      .query("select * from company", {
-        replacements: {
-          produtoid: produtoid,
-        },
+      .query("select * from trip", {
       })
       .then((results) => {
-        return res.json(pro);
+        return res.json(results);
       });
     }catch(error){
       return res.json("Erro interno");
