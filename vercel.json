@@ -4,9 +4,10 @@
     "routes":[
         {
             "src":"/api/teste",
-            "dest": "/index.js",
+            "dest": "index.js",
             "methods":["GET"]
             }
+            
     ]
 
 }
