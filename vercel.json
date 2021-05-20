@@ -3,22 +3,22 @@
     "builds": [{ "src": "index.js", "use": "@now/node-server", "config": { "bundle": false } }],
     "routes":[
         {
-            "src":"/api/users/login/",
+            "src":"/api/users/login",
             "dest": "/index.js",
             "methods":["POST"]
         },
         {
-            "src":"/api/company/info/",
+            "src":"/api/company/info",
             "dest": "/index.js",
             "methods":["POST"]
         },
         {
-            "src":"/api/employee/info/",
+            "src":"/api/employee/info",
             "dest": "/index.js",
             "methods":["POST"]
         },
         {
-            "src":"/api/company/vehicle/",
+            "src":"/api/company/vehicle",
             "dest": "/index.js",
             "methods":["POST"]
         }  
