@@ -3,7 +3,7 @@ const connection = require("../db/config");
 
 module.exports = {
   async login(req, res) {
-    const { firebaseKey } = req.body;
+    const { firebaseKey } = "ZVguuAgogEaoW6NKGWnNqRVUxEO2";
     const isEmployee=false;
     const isCompany=false;
     //vai a tabela employee ver se existe
