@@ -16,8 +16,12 @@
             "src":"/api/employee-info",
             "dest": "/index.js",
             "methods":["POST"]
-        }
-            
+        },
+        {
+            "src":"/api/company/vehicle",
+            "dest": "/index.js",
+            "methods":["POST"]
+        }  
     ]
 
 }
