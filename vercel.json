@@ -6,7 +6,17 @@
             "src":"/api/login",
             "dest": "/index.js",
             "methods":["POST"]
-            }
+        },
+        {
+            "src":"/api/company-info",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
+            "src":"/api/employee-info",
+            "dest": "/index.js",
+            "methods":["POST"]
+        }
             
     ]
 
