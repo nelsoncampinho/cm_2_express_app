@@ -36,7 +36,7 @@ module.exports = {
       });
     }catch(error){
       console.log(error)
-      return res.json("Erro interno");
+      return res.json({'status':false,'userid':'','companyid':''})
     }
   },
 };
