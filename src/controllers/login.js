@@ -3,7 +3,7 @@ const connection = require("../db/config");
 
 module.exports = {
   async login(req, res) {
-    const  firebaseKey  = "dAGS0TudqXY02VpZske94Puynlt2";
+    const  {firebaseKey}  = req.body;
     const isEmployee=false;
     const isCompany=false;
     //vai a tabela employee ver se existe
@@ -16,7 +16,6 @@ module.exports = {
       .then(async(results) => {
         if(results[0].length>0){
           const userid = results[0][0].employee_key;
-          console.log(userid)
           const companyid = results[0][0].company_key;
           return res.json({'status':true,'userid':userid,'companyid':companyid})
         }else{
