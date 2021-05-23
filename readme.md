@@ -28,7 +28,8 @@
     "phone_number": "91231231",
     "employee_address": "Rua la de cima",
     "picture": null,
-    "company_key": "ZVguuAgogEaoW6NKGWnNqRVUxEO2"
+    "company_key": "ZVguuAgogEaoW6NKGWnNqRVUxEO2",
+    "on_service": true
     }
 
     * /api/employee/trips -> 
@@ -83,7 +84,8 @@
         "phone_number": "91231231",
         "employee_address": "Rua la de cima",
         "picture": null,
-        "company_key": "ZVguuAgogEaoW6NKGWnNqRVUxEO2"
+        "company_key": "ZVguuAgogEaoW6NKGWnNqRVUxEO2",
+        "on_service": true
     }
     ]
 ### External
