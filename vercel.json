@@ -13,15 +13,50 @@
             "methods":["POST"]
         },
         {
+            "src":"/api/company/vehicle",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
+            "src":"/api/company/employees",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
             "src":"/api/employee/info",
             "dest": "/index.js",
             "methods":["POST"]
         },
         {
-            "src":"/api/company/vehicle",
+            "src":"/api/employee/trips",
             "dest": "/index.js",
             "methods":["POST"]
-        }  
+        },
+        {
+            "src":"/api/external/vehicle",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
+            "src":"/api/vehicle/get_info",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
+            "src":"/api/vehicle/get_trips",
+            "dest": "/index.js",
+            "methods":["POST"]
+        },
+        {
+            "src":"/api/vehicle/get_actions",
+            "dest": "/index.js",
+            "methods":["POST"]
+        }
+        
+
+        
+        
+       
     ]
 
 }

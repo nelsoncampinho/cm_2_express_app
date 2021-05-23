@@ -124,21 +124,19 @@
     * /api/vehicle/get_trips
         * POST
         * JSON request -> {'plate':''}
-        * JSON response ->[
-  {
+        * JSON response ->[{
     "trip_id": 1,
     "travel_distance": "320.1",
     "date": "2021-05-23",
     "license_plate": "XX-XX-XX",
     "employee_key": "dAGS0TudqXY02VpZske94Puynlt2"
-  }
-]
+    }
+    ]
 
     * /api/vehicle/get_actions
         * POST
         * JSON request -> {'plate':''}
-        * JSON response -> [
-  {
+        * JSON response -> [{
     "action_id": 2,
     "action_description": "Mudar oleo",
     "cost": "400.34",
@@ -147,11 +145,11 @@
     "date": "2021-05-23",
     "license_plate": "XX-XX-XX",
     "action_type": null
-  }
-]
+     }
+    ]
 
 
-* /api/
-    * POST
-    * JSON request -> {'firebaseKey':firebasekey}
-    * JSON response -> {'status':false,'userid':'','companyid':''}
+    * /api/
+        * POST
+        * JSON request -> {'firebaseKey':firebasekey}
+        * JSON response -> {'status':false,'userid':'','companyid':''}
