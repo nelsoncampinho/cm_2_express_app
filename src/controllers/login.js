@@ -26,7 +26,7 @@ module.exports = {
           .then((results) => {
             if(results[0].length>0){
                 const companyid = results[0][0].company_key;
-                return res.json({'status':true,'userid':'','companyid':companyid})
+                return res.json({'status':true,'userid':'company','companyid':companyid})
             }else{
               return res.json({'status':false,'userid':'','companyid':''})
             }
