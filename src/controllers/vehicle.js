@@ -2,13 +2,12 @@ require("dotenv").config();
 const connection = require("../db/config");
 
 module.exports = {
-  async get_company_info(req, res) {
-    const { companyKey } = req.body;
-    console.log(companyKey)
+  async get_vehicle_info(req, res) {
+    const { plate } = req.body;
     try{
       await connection
-      .query("Select * from company where company_key=:firebasekey", {
-        replacements: { firebasekey:companyKey },
+      .query("Select * from vehicle where license_plate=:plate", {
+        replacements: { plate:plate },
       })
       .then(async(results) => {
         if(results[0].length>0){
@@ -20,16 +19,16 @@ module.exports = {
       return res.json("Erro interno");
     }
   },
-  async get_employee_info(req, res) {
-    const { firebaseKey } = req.body;
+  async get_vehicle_trips(req, res) {
+    const { plate } = req.body;
     try{
       await connection
-      .query("Select * from employee where employee_key=:firebasekey", {
-        replacements: { firebasekey:firebaseKey },
+      .query("Select * from trip where license_plate=:plate", {
+        replacements: { plate:plate },
       })
       .then(async(results) => {
         if(results[0].length>0){
-          return res.json(results[0][0])
+          return res.json(results[0])
          }
       });
     }catch(error){
@@ -37,13 +36,13 @@ module.exports = {
       return res.json("Erro interno");
     }
   },
-
-  async get_employee_trips(req, res) {
-    const { firebaseKey } = req.body;
+  async get_vehicle_actions(req, res) {
+    const { plate } = req.body;
+    console.log(plate)
     try{
       await connection
-      .query("Select * from trip where employee_key=:firebasekey", {
-        replacements: { firebasekey:firebaseKey },
+      .query("Select * from actions where license_plate=:plate", {
+        replacements: { plate:plate },
       })
       .then(async(results) => {
         if(results[0].length>0){

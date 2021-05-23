@@ -19,4 +19,21 @@ module.exports = {
       return res.json("Erro interno");
     }
   },
+  async get_company_employees(req, res) {
+    const { companyKey } = req.body;
+    try{
+      await connection
+      .query("Select * from employee where company_key=:companyKey", {
+        replacements: { companyKey:companyKey },
+      })
+      .then(async(results) => {
+        if(results[0].length>0){
+          return res.json(results[0])
+         }
+      });
+    }catch(error){
+      console.log(error)
+      return res.json("Erro interno");
+    }
+  },
 }
